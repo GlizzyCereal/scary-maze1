@@ -7,8 +7,11 @@ public class Button : MonoBehaviour
 {
     private string sceneToLoad = "Level 1";
 
-    private void OnMouseDown()
+    private void Update()
     {
-        SceneManager.LoadScene(sceneToLoad);
+        if (Input.anyKey)
+        {
+            SceneManager.LoadScene(sceneToLoad);
+        }
     }
 }
